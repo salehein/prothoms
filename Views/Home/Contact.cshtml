@@ -1,0 +1,118 @@
+﻿@model ProthomSurjo.Models.EmailData
+@{
+    ViewBag.Title = "Contact";
+}
+<script>
+    $('#menuHome').removeClass('active');
+    $('#menuContact').addClass('active');
+</script>
+
+<div id="content">
+    <div class="ic"></div>
+    <div class="container">
+        <div class="row">
+            <article class="span8">
+                <div class="block-slogann">
+                    <h2>Contact us</h2>
+                </div>
+                <div class="inner-1">
+                    @if (@Model.Success == false)
+                    {
+                        using (Html.BeginForm())
+                        {
+                        <form id="contact-form">
+                            <fieldset>
+                                <div>
+                                    <label class="name">
+                                        <input type="text" value="Your name">
+                                        <br>
+                                        <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label class="phone">
+                                        <input type="tel" value="Telephone">
+                                        <br>
+                                        <span class="error">*This is not a valid phone number.</span> <span class="empty">*This field is required.</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label class="email">
+                                        <input type="email" value="Email">
+                                        <br>
+                                        <span class="error">*This is not a valid email address.</span> <span class="empty">*This field is required.</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label class="message">
+                                        <textarea>Message</textarea>
+                                        <br>
+                                        <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+                                    </label>
+                                </div>
+                                <div class="buttons-wrapper"><a class="btn btn-1" data-type="reset">Clear</a> <a class="btn btn-1" data-type="submit">Send</a></div>
+                            </fieldset>
+                        </form>
+                        }
+                    }
+                    else
+                    {
+                        <div>Contact form submitted! <strong>We will be in touch soon.</strong> </div>
+                    }
+                </div>
+            </article>
+            <article class="span4">
+                <div class="block-slogann">
+                    <h2>Contact info</h2>
+                </div>
+
+                <div class="map">
+                    <script type="text/javascript"
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5tkMD0gPNjYThS2d57lYgC95kobNx278&sensor=true">
+                    </script>
+                    <div id="map" style="width: 420px; height: 420px;"></div>
+                    <script>
+                        $(document).ready(function () {
+                            var map;
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 20,
+                                center: new google.maps.LatLng(23.765139, 90.415087),
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                            });
+
+                            var infowindow = new google.maps.InfoWindow();
+
+                            var marker;
+                            marker = new google.maps.Marker({
+                                position: new google.maps.LatLng(23.765139, 90.415087),
+                                map: map,
+                                title: "Banani, Dhaka"
+                            });
+
+                            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                return function () {
+                                    infowindow.setContent("Catch me if you can");
+                                    infowindow.open(map, marker);
+                                }
+                            })(marker));
+                        });
+                    </script>
+                </div>
+                <address class="address-1">
+                    <strong>Prothom surjo Foundation<br>
+                        385/4,(2nd flour, D 3) Momotaz Mohol
+                        <br>
+                        Free School Street,
+                        <br>
+                        Dhaka-1205</strong>
+                    <div class="overflow">
+                        <span></span>+1 800 559 6580<br>
+                        <span></span>+1 800 603 6035<br>
+                        <span></span>+1 800 889 9898
+                        <br>
+                        <span></span><a href="#" class="mail-1">mail@prothomsurja.org</a><br>
+                </address>
+            </article>
+        </div>
+    </div>
+</div>
