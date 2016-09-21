@@ -1,0 +1,47 @@
+﻿Ref: https://docs.google.com/document/d/1uKhOjOcdgWMLUguECVHaYpmOcL7aq4AFfuBeF23SFaw/edit?ts=57978162
+
+done:
+-----
+1) ok
+2) Text changed
+3) ok
+4) ok
+5) ok
+
+page2
+2) ok
+
+page-mission
+#) Mission Statement + content
+#) Safety + content
+#) Education + content
+#) Hope + content
+
+Donations' page
+- Switch ‘Our donors’ to ‘Donate’
+
+pending:
+--------
+2) Make it bigger
+
+#) General notes:
+- make all pictures bigger
+- make 'welcome' and header text bigger
+
+page2
+1) (need to find the FAQ page pictures)
+General: make images large (can use 3-5 maybe); glitch with the scrolling?
+
+page-mission
+General: image glitch? (otherwise choose 2 from folder attached)
+
+#) "Mission Statement" font bigger. (see gdoc)
+
+Donations' page
+- (Let’s do a skype call about this page?; the page image is just for a general idea)'
+
+1) Make images large and take from attached folder
+2) We would like to heartily thank our donors for standing by us.  ....
+
+GENERAL:
+Make the header into faded pictures

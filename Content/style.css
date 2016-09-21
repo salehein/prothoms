@@ -1296,3 +1296,6 @@ footer {
   overflow: hidden;
 }
 
+.quote {
+    font-size: 18px;
+}
